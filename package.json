@@ -1,0 +1,19 @@
+{
+  "name": "scopeflow",
+  "version": "1.0.0",
+  "description": "Structured feature development workflow for Claude Code: Explore → Plan → Implement → Update → Commit → Document",
+  "author": "Edifi Ventures",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edifi-ventures/scopeflow"
+  },
+  "keywords": [
+    "claude-code",
+    "ai-agent",
+    "workflow",
+    "planning",
+    "scope-management",
+    "feature-development"
+  ]
+}

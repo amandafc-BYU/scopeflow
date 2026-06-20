@@ -1,0 +1,40 @@
+#!/bin/bash
+# Scopeflow setup script
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+echo "Scopeflow — Structured feature development workflow"
+echo "===================================================="
+echo ""
+
+# Check if already in ~/.claude/skills
+if [[ "$SCRIPT_DIR" == *"/.claude/skills/scopeflow"* ]]; then
+    echo "✓ Already installed in Claude Code skills"
+else
+    echo "To install for Claude Code, run:"
+    echo ""
+    echo "  git clone https://github.com/edifi-ventures/scopeflow.git ~/.claude/skills/scopeflow"
+    echo ""
+fi
+
+# Create output directory
+mkdir -p .claude/output/scopes
+
+echo "✓ Created .claude/output/scopes/ for scope documents"
+echo ""
+
+echo "Available commands:"
+echo "  /explore   — Read-only codebase exploration"
+echo "  /prepare   — Create scope document from requirements"
+echo "  /implement — Implement from scope document"
+echo "  /update    — Update scope with progress"
+echo "  /commit    — Commit and create PR"
+echo "  /document  — Create feature documentation"
+echo ""
+echo "Workflow: explore → prepare → implement → update → commit → document"
+echo ""
+echo "Get started:"
+echo "  /explore src/auth and how sessions work"
+echo ""
