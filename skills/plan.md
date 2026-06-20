@@ -21,14 +21,35 @@ Do not write code — only produce and save the plan.
 - Note **project name** and **framework/stack**
 - Output: `**Project:** {name} ({framework})`
 
-### 2. Assess scope size
+### 2. Detect work type and scope
 
-| Size | Files | Template |
-|------|-------|----------|
-| Small | 1-3 files | `templates/scope-small.md` |
-| Medium | 4-10 files | `templates/scope-full.md` |
-| Large | 10+ files | `templates/scope-full.md` with multiple slices |
+First, identify the type of work:
 
+| Type | Signals | Template | Notes |
+|------|---------|----------|-------|
+| **Feature** | "Add", "Create", "Build", new capability | `scope-small.md` or `scope-full.md` | Full planning |
+| **Bug fix** | "Fix", "Bug", "Broken", "Doesn't work" | → Suggest `/fix` | Lightweight flow |
+| **Refactor** | "Refactor", "Extract", "Clean up", "Reorganize" | `scope-refactor.md` | Safety-focused |
+| **Chore** | "Update", "Upgrade", "Config", "CI", deps | `scope-chore.md` | Minimal checklist |
+| **Performance** | "Slow", "Optimize", "Speed up" | `scope-perf.md` | Before/after metrics |
+
+**If bug fix:** Suggest `/fix` for simple bugs or `/debug` first if unclear:
+```
+This looks like a bug fix. For faster iteration:
+- Clear issue → Run /fix {description}
+- Need investigation → Run /debug {symptoms}
+- Complex/risky fix → Continue with /plan
+```
+
+Then assess scope size:
+
+| Size | Files | Template variant |
+|------|-------|------------------|
+| Small | 1-3 files | `-small` or minimal |
+| Medium | 4-10 files | full template |
+| Large | 10+ files | full template with slices |
+
+State: `**Type:** feature | refactor | chore | performance`
 State: `**Scope:** small | medium | large`
 
 ### 3. Research and plan

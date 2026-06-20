@@ -15,6 +15,8 @@ Structured feature development workflow for Claude Code.
 - Updating progress mid-session (`/update`)
 - Committing and creating a PR (`/commit`)
 - Creating feature documentation (`/document`)
+- Debugging an issue (`/debug`)
+- Quick bug fix (`/fix`)
 
 ## The workflow
 
@@ -54,13 +56,18 @@ Then:
 | `/commit [ticket-ref]` | Commit and create PR |
 | `/document [scope-path]` | Create feature documentation |
 | `/monitor <what>` | Set up monitoring, dashboards, alerts |
+| `/debug <issue>` | Investigate issues, find root cause |
+| `/fix <bug>` | Lightweight bug fix workflow |
 
 ## Templates
 
 This plugin includes templates in `templates/`:
 - `scope-small.md` — For small scopes (1-3 files)
-- `scope-full.md` — For medium/large scopes
+- `scope-full.md` — For medium/large features
+- `scope-refactor.md` — For refactoring (before/after, safety checks)
+- `scope-chore.md` — For config, deps, CI/CD
+- `scope-perf.md` — For performance (before/after metrics)
 - `pr-template.md` — PR description template
 - `feature-doc.md` — Feature documentation template
 
-Skills reference these via `$SCOPEFLOW_DIR/templates/`.
+`/plan` auto-detects work type and selects the appropriate template.

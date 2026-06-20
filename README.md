@@ -82,6 +82,42 @@ Configure monitoring, create dashboard queries, set up alerts.
 
 Supports: Sentry, Metabase, PostgreSQL, Datadog, PostHog, Prometheus
 
+## Debugging & Non-Feature Work
+
+Not everything is a feature. Scopeflow handles:
+
+### `/debug` — Investigate issues
+Systematic debugging with hypotheses, evidence gathering, and root cause identification.
+
+```
+/debug login fails after password reset
+```
+
+Can be standalone or mid-implementation when you hit an unexpected issue.
+
+### `/fix` — Lightweight bug fixes
+Fast path for known bugs with clear fixes. Skips heavy planning.
+
+```
+/fix Users see 500 error on checkout
+```
+
+When to use which:
+- **Unclear issue** → `/debug` first
+- **Known bug, simple fix** → `/fix`
+- **Complex/risky fix** → `/plan`
+
+### Work Types
+
+`/plan` auto-detects work type and adjusts the template:
+
+| Type | Template | When |
+|------|----------|------|
+| **Feature** | `scope-full.md` | New capabilities |
+| **Refactor** | `scope-refactor.md` | Code improvement (no behavior change) |
+| **Chore** | `scope-chore.md` | Config, deps, CI/CD |
+| **Performance** | `scope-perf.md` | Speed improvements (before/after metrics) |
+
 ## Scope Document Structure
 
 Every scope document includes:
@@ -157,12 +193,14 @@ Add Google OAuth so users can sign in without passwords.
 | Command | Phase | What it does |
 |---------|-------|--------------|
 | `/explore` | Explore | Read-only codebase discovery |
-| `/plan` | Plan | Create scope document from requirements |
+| `/plan` | Plan | Create scope document (auto-detects work type) |
 | `/implement` | Implement | Code against the scope, run tests |
 | `/update` | Update | Sync scope with implementation progress |
 | `/commit` | Commit | Commit changes and create PR |
 | `/document` | Document | Generate feature documentation |
 | `/monitor` | Ops | Set up monitoring, dashboards, and alerts |
+| `/debug` | Debug | Investigate issues, find root cause |
+| `/fix` | Fix | Lightweight bug fix workflow |
 
 ## License
 
