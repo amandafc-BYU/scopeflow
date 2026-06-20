@@ -88,6 +88,78 @@ todos:
 
 ---
 
+## Review Checklists
+
+<!-- Include only the sections relevant to this feature. Delete sections that don't apply. -->
+
+### Schema Review
+<!-- Include if: DB migrations, new tables/columns, API contract changes -->
+
+- [ ] New tables/columns documented with types and constraints
+- [ ] Migration strategy: {backwards compatible | backfill needed | breaking}
+- [ ] Index requirements: {list indexes}
+- [ ] Foreign keys: {relationships}
+- [ ] API contract: {no changes | additive | breaking — versioned?}
+
+### Security Checklist
+<!-- Include if: auth changes, user data, external input, new endpoints -->
+
+- [ ] Authentication: {required | not required | N/A}
+- [ ] Authorization: {checks needed}
+- [ ] Input validation: {where and what}
+- [ ] Sensitive data: {PII/secrets handling}
+- [ ] Rate limiting: {needed | not needed}
+- [ ] OWASP review: {concerns addressed}
+
+### Rollback Plan
+
+- [ ] Feature flagged: {Yes — flag name | No — rationale}
+- [ ] Migration reversible: {Yes | No — manual steps needed}
+- [ ] Rollback steps: {what to do if deploy fails}
+- [ ] Data cleanup: {needed | not needed}
+
+### Feature Flag
+
+- [ ] Gated: {Yes | No} — {rationale}
+- [ ] Rollout: {100% | progressive — % ramp}
+- [ ] Kill switch: {flag name or N/A}
+- [ ] Cleanup: {remove after date/milestone}
+
+### Observability
+
+- [ ] Metrics: {key metrics to track}
+- [ ] Alerts: {error scenarios}
+- [ ] Logging: {additions needed}
+- [ ] Dashboard: {queries to create — see /monitor}
+
+### Dependencies
+<!-- Include if: new packages added -->
+
+| Package | Version | License | Notes |
+|---------|---------|---------|-------|
+| {pkg} | {ver} | {MIT/Apache/etc} | {why needed} |
+
+- [ ] Security advisories checked
+- [ ] Bundle size impact: {KB added | N/A}
+
+### Performance
+<!-- Include if: data-heavy, latency-sensitive, high-traffic paths -->
+
+- [ ] Query patterns: {expected load}
+- [ ] Caching: {strategy or N/A}
+- [ ] Pagination: {limits for large datasets}
+- [ ] Async: {background job vs sync}
+
+### Accessibility
+<!-- Include if: UI changes -->
+
+- [ ] Keyboard nav: {covered}
+- [ ] Screen reader: {ARIA labels}
+- [ ] Color contrast: {verified}
+- [ ] Focus management: {handled}
+
+---
+
 ## Implementation Status
 
 - **Status:** PLANNED

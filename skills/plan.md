@@ -40,7 +40,64 @@ State: `**Scope:** small | medium | large`
 5. **Tier classification** — recommend Free / Freemium / Premium with rationale
 6. **Test plan** — detect testing framework, list test files and assertions
 
-### 4. Save the scope
+### 4. Review checklists (include if relevant)
+
+For each applicable checklist, add a section to the scope document.
+
+#### Schema Review (if DB or API changes)
+- [ ] New tables/columns documented with types and constraints
+- [ ] Migration strategy (backwards compatible? backfill needed?)
+- [ ] Index requirements for new queries
+- [ ] Foreign key relationships
+- [ ] API contract changes (breaking? versioned?)
+- [ ] Data validation rules
+
+#### Security Checklist (if auth, user data, or external input)
+- [ ] Authentication required for new endpoints
+- [ ] Authorization checks (who can access what)
+- [ ] Input validation and sanitization
+- [ ] Sensitive data handling (PII, secrets, tokens)
+- [ ] Rate limiting needed?
+- [ ] OWASP top 10 review (injection, XSS, CSRF, etc.)
+
+#### Rollback Plan
+- [ ] Can this be feature-flagged?
+- [ ] Database migration reversible?
+- [ ] How to rollback if deploy fails
+- [ ] Data cleanup needed on rollback?
+
+#### Feature Flag Decision
+- [ ] Should this be gated? (Yes/No + rationale)
+- [ ] Progressive rollout strategy (% ramp, cohorts)
+- [ ] Kill switch requirements
+- [ ] Flag cleanup plan (when to remove)
+
+#### Observability Hooks (ties into /monitor)
+- [ ] Key metrics to track
+- [ ] Error scenarios to alert on
+- [ ] Logging additions needed
+- [ ] Dashboard queries to create
+
+#### Dependencies Audit (if new packages)
+- [ ] New dependencies listed with versions
+- [ ] License compatibility check
+- [ ] Bundle size impact (frontend)
+- [ ] Security advisories check
+- [ ] Maintenance status (actively maintained?)
+
+#### Performance Considerations (if data-heavy or latency-sensitive)
+- [ ] Query patterns and expected load
+- [ ] Caching strategy
+- [ ] Pagination/limits for large datasets
+- [ ] Background job vs sync processing
+
+#### Accessibility (if UI changes)
+- [ ] Keyboard navigation
+- [ ] Screen reader support (ARIA labels)
+- [ ] Color contrast
+- [ ] Focus management
+
+### 5. Save the scope
 
 Location: `.claude/output/scopes/{feature-slug}-{project}.md`
 
@@ -49,7 +106,7 @@ Create the directory if needed:
 mkdir -p .claude/output/scopes
 ```
 
-### 5. Signal next step
+### 6. Signal next step
 
 For single-slice:
 ```
