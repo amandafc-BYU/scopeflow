@@ -1,11 +1,11 @@
 ---
-name: prepare
+name: plan
 description: Create a scope document from requirements. Plan phase — no code, only planning. Saves to .claude/output/scopes/.
 argument-hint: [requirements or feature description]
 allowed-tools: Read, Write, Grep, Glob
 ---
 
-# Prepare
+# Plan
 
 Create a **scope document** from requirements. This is the **Plan** phase of:
 

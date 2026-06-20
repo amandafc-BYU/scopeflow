@@ -36,11 +36,11 @@ Read-only exploration. Runs in a forked agent so your main context stays clean.
 /explore src/auth and how sessions are handled
 ```
 
-### 2. `/prepare` — Create a scope document
+### 2. `/plan` — Create a scope document
 Turn requirements into a structured plan with acceptance criteria, file lists, and test plans.
 
 ```
-/prepare Add Google OAuth login with session persistence
+/plan Add Google OAuth login with session persistence
 ```
 
 Output: `.claude/output/scopes/google-oauth-myproject.md`
@@ -72,6 +72,15 @@ Generate user/developer documentation from the completed scope.
 ```
 /document
 ```
+
+### 7. `/monitor` — Set up observability
+Configure monitoring, create dashboard queries, set up alerts.
+
+```
+/monitor auth failures and login patterns
+```
+
+Supports: Sentry, Metabase, PostgreSQL, Datadog, PostHog, Prometheus
 
 ## Scope Document Structure
 
@@ -148,11 +157,12 @@ Add Google OAuth so users can sign in without passwords.
 | Command | Phase | What it does |
 |---------|-------|--------------|
 | `/explore` | Explore | Read-only codebase discovery |
-| `/prepare` | Plan | Create scope document from requirements |
+| `/plan` | Plan | Create scope document from requirements |
 | `/implement` | Implement | Code against the scope, run tests |
 | `/update` | Update | Sync scope with implementation progress |
 | `/commit` | Commit | Commit changes and create PR |
 | `/document` | Document | Generate feature documentation |
+| `/monitor` | Ops | Set up monitoring, dashboards, and alerts |
 
 ## License
 

@@ -10,7 +10,7 @@ Structured feature development workflow for Claude Code.
 
 ## When to use
 
-- Starting a new feature (run `/explore` then `/prepare`)
+- Starting a new feature (run `/explore` then `/plan`)
 - Implementing from a scope document (`/implement`)
 - Updating progress mid-session (`/update`)
 - Committing and creating a PR (`/commit`)
@@ -19,11 +19,11 @@ Structured feature development workflow for Claude Code.
 ## The workflow
 
 ```
-/explore → /prepare → /implement → /update → /commit → /document
+/explore → /plan → /implement → /update → /commit → /document
 ```
 
 1. **Explore** — Read-only codebase discovery before planning
-2. **Prepare** — Create a scope document from requirements
+2. **Plan** — Create a scope document from requirements
 3. **Implement** — Code against the scope, run tests, fix failures
 4. **Update** — Sync the scope doc with implementation reality
 5. **Commit** — Commit changes and create a PR
@@ -36,7 +36,7 @@ Structured feature development workflow for Claude Code.
 ```
 Then:
 ```
-/prepare Add OAuth login with Google
+/plan Add OAuth login with Google
 ```
 Then:
 ```
@@ -48,11 +48,12 @@ Then:
 | Command | Purpose |
 |---------|---------|
 | `/explore <area>` | Read-only exploration of codebase |
-| `/prepare <requirements>` | Create scope document |
+| `/plan <requirements>` | Create scope document |
 | `/implement <scope-path>` | Implement from scope doc |
 | `/update [scope-path]` | Update scope with progress |
 | `/commit [ticket-ref]` | Commit and create PR |
 | `/document [scope-path]` | Create feature documentation |
+| `/monitor <what>` | Set up monitoring, dashboards, alerts |
 
 ## Templates
 

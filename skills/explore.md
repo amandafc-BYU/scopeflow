@@ -26,7 +26,7 @@ Runs in a forked agent so exploration stays read-only and doesn't fill your main
 - Use Read, Grep, Glob only — no Write, Edit, or Bash that modifies files
 - If the request is vague, suggest a focused exploration
 - Point to files and sections relevant to the user's goal
-- Do NOT propose implementation plans — that's for `/prepare`
+- Do NOT propose implementation plans — that's for `/plan`
 
 ## Output
 
@@ -38,5 +38,5 @@ Runs in a forked agent so exploration stays read-only and doesn't fill your main
 
 When done, tell the user:
 ```
-Run /prepare <requirements> to create a scope document.
+Run /plan <requirements> to create a scope document.
 ```
