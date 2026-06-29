@@ -1,0 +1,20 @@
+{
+  "name": "scopeflow",
+  "description": "Structured feature development workflow for Claude Code",
+  "owner": {
+    "name": "Edifi Ventures",
+    "email": "edifiventures@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "scopeflow",
+      "description": "Explore → Plan → Implement → Update → Commit → Document workflow",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Edifi Ventures",
+        "email": "edifiventures@gmail.com"
+      }
+    }
+  ]
+}
