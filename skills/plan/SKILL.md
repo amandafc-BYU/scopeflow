@@ -55,7 +55,7 @@ State: `**Scope:** small | medium | large`
 ### 3. Research and plan
 
 1. Read referenced files; document **current behavior** before proposing changes
-2. Fill the appropriate template from `$SCOPEFLOW_DIR/templates/`
+2. Fill the appropriate template from `${CLAUDE_PLUGIN_ROOT}/templates/`
 3. Identify acceptance criteria and edge cases
 4. Check for reusable components (especially for UI work)
 5. **Tier classification** — recommend Free / Freemium / Premium with rationale

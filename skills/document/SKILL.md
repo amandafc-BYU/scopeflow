@@ -16,7 +16,7 @@ Create feature documentation after implementation. This is the **Document** phas
 ### 1. Gather context
 
 - Read scope doc if path provided, otherwise infer from git history
-- Read the template: `$SCOPEFLOW_DIR/templates/feature-doc.md`
+- Read the template: `${CLAUDE_PLUGIN_ROOT}/templates/feature-doc.md`
 - Identify project stack and conventions
 
 ### 2. Fill the template

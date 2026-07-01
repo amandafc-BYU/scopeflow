@@ -15,7 +15,7 @@ if [[ "$SCRIPT_DIR" == *"/.claude/skills/scopeflow"* ]]; then
 else
     echo "To install for Claude Code, run:"
     echo ""
-    echo "  git clone https://github.com/edifi-ventures/scopeflow.git ~/.claude/skills/scopeflow"
+    echo "  git clone https://github.com/amandafc-BYU/scopeflow.git ~/.claude/skills/scopeflow"
     echo ""
 fi
 
@@ -27,13 +27,13 @@ echo ""
 
 echo "Available commands:"
 echo "  /explore   — Read-only codebase exploration"
-echo "  /prepare   — Create scope document from requirements"
+echo "  /plan      — Create scope document from requirements"
 echo "  /implement — Implement from scope document"
 echo "  /update    — Update scope with progress"
 echo "  /commit    — Commit and create PR"
 echo "  /document  — Create feature documentation"
 echo ""
-echo "Workflow: explore → prepare → implement → update → commit → document"
+echo "Workflow: explore → plan → implement → update → commit → document"
 echo ""
 echo "Get started:"
 echo "  /explore src/auth and how sessions work"

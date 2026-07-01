@@ -39,7 +39,7 @@ Ticket: DX-523"
 
 ### 3. Create PR
 
-Use the PR template from `$SCOPEFLOW_DIR/templates/pr-template.md`:
+Use the PR template from `${CLAUDE_PLUGIN_ROOT}/templates/pr-template.md`:
 
 1. Read the template
 2. Fill in from changes and scope document

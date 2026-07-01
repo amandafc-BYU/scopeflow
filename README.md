@@ -4,7 +4,7 @@ Structured feature development workflow for Claude Code.
 
 **Explore → Plan → Implement → Update → Commit → Document**
 
-Stop coding without a plan. Scopeflow enforces the [Claude Code best practice](https://claude.ai/code/docs/best-practices#explore-first-then-plan-then-code) of exploring first, then planning, then coding — with living scope documents that track progress, deviations, and follow-up work.
+Stop coding without a plan. Scopeflow enforces the [Claude Code best practice](https://code.claude.com/docs) of exploring first, then planning, then coding — with living scope documents that track progress, deviations, and follow-up work.
 
 ## Why Scopeflow?
 
@@ -19,12 +19,12 @@ Scopeflow fixes this with **living scope documents** — plans that update as im
 ## Install
 
 ```bash
-git clone https://github.com/edifi-ventures/scopeflow.git ~/.claude/skills/scopeflow
+git clone https://github.com/amandafc-BYU/scopeflow.git ~/.claude/skills/scopeflow
 ```
 
 Or add to a project:
 ```bash
-git clone https://github.com/edifi-ventures/scopeflow.git .claude/skills/scopeflow
+git clone https://github.com/amandafc-BYU/scopeflow.git .claude/skills/scopeflow
 ```
 
 ## The Workflow

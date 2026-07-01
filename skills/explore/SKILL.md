@@ -3,8 +3,6 @@ name: explore
 description: Read-only codebase exploration. Use for the Explore phase — read files, answer questions, gather context before planning. No edits.
 argument-hint: [what to explore — e.g. "src/auth and session handling"]
 allowed-tools: Read, Grep, Glob
-context: fork
-agent: Explore
 ---
 
 # Explore
@@ -13,7 +11,7 @@ Read-only codebase exploration. This is the **Explore** phase of:
 
 **Explore → Plan → Implement → Update → Commit → Document**
 
-Runs in a forked agent so exploration stays read-only and doesn't fill your main context.
+Restricted to read-only tools (Read, Grep, Glob) so exploration never modifies files.
 
 ## Your task
 
