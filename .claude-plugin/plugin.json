@@ -1,7 +1,7 @@
 {
   "name": "scopeflow",
   "description": "Structured feature development workflow: Explore → Plan → Implement → Update → Commit → Document",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Edifi Ventures",
     "email": "edifiventures@gmail.com"

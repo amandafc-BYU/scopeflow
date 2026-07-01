@@ -1,6 +1,6 @@
 {
   "name": "scopeflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Structured feature development workflow for Claude Code: Explore → Plan → Implement → Update → Commit → Document",
   "author": "Edifi Ventures",
   "license": "MIT",
